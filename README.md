@@ -8,3 +8,6 @@
 58. Creating Events
 59. Deleting Events
 60. Editing Titles
+
+// To run the json-server
+npx json-server --watch json-server/db.json --port 3001

@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "title": "Working on task 3",
+      "dateStart": "2021-12-19T10:03:02.751Z",
+      "dateEnd": "2021-12-19T11:03:02.751Z",
+      "id": 1
+    },
+    {
+      "title": "Working on task 1",
+      "dateStart": "2021-12-19T14:03:02.751Z",
+      "dateEnd": "2021-12-19T16:03:02.751Z",
+      "id": 2
+    }
+  ]
+}
