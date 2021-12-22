@@ -107,7 +107,7 @@ export const loadUserEvents = (): ThunkAction<
     }
 }
 
-const userEventsReducer = (state: UserEventsState = initialState, action: LoadSuccessAction) => {
+const userEventsReducer = (state: UserEventsState = initialState, action: LoadSuccessAction | CreateSuccessAction) => {
     switch (action.type) {
         case LOAD_SUCCESS:
             const {events} = action.payload;
@@ -123,6 +123,13 @@ const userEventsReducer = (state: UserEventsState = initialState, action: LoadSu
                     {}
                 )
             }
+        case CREATE_SUCCESS:
+            const { event } = action.payload;
+            return {
+                ...state,
+                allIds: [...state.allIds, event.id],
+                byIds: { ...state.byIds, [event.id]: event }
+            };
         default:
             return state;
     }
